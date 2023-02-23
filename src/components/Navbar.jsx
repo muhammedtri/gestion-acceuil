@@ -13,7 +13,6 @@ const Navbar = ({ setMode }) => {
       <AppBar position="static">
         <Toolbar style={{ display: "flex", justifyContent: "space-between" }}>
           <Typography variant="h5">Gestion Acceuil</Typography>
-          <Typography variant="h6">App Created by MELLALA MOHAMMED</Typography>
           <Box style={{ display: "flex", alignItems: "center" }}>
             <Typography>
               {theme.palette.mode === "light" ? "Light " : "Dark "}Mode
