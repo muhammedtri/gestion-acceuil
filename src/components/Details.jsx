@@ -21,7 +21,7 @@ const StyledTableCell = styled(TableCell)(() => ({
 }))
 
 const Details = () => {
-  const { dataAssure, handleSearch, setSearchTerm } = useContext(ContextAssure)
+  const { handleSearch, setSearchTerm } = useContext(ContextAssure)
   return (
     <div>
       <Container>

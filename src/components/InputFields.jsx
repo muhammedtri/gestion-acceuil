@@ -117,7 +117,12 @@ const InputFields = () => {
               variant="outlined"
               fullWidth
             />
-            <Button variant="contained" color="primary" fullWidth type="submit">
+            <Button
+              variant="contained"
+              style={{ backgroundColor: "#1976d2" }}
+              fullWidth
+              type="submit"
+            >
               {appMode === "create" ? "Ajouter" : "Mettre à jour"}
             </Button>
           </Box>
