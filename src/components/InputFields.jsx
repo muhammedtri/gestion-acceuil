@@ -119,7 +119,7 @@ const InputFields = () => {
             />
             <Button
               variant="contained"
-              style={{ backgroundColor: "#1976d2" }}
+              style={{ backgroundColor: "#1976d2", color: "white" }}
               fullWidth
               type="submit"
             >
