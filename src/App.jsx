@@ -1,24 +1,27 @@
-import { Navbar, InputFields, Details } from "./components"
-import { createTheme, ThemeProvider } from "@mui/material/styles"
-import { useState } from "react"
+import { LoginPage } from "./components"
+import HomePage from "./pages/HomePage"
 import { Paper } from "@mui/material"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import PrivateRoute from "./components/PrivateRoute"
+import { useState } from "react"
 
 function App() {
-  const [mode, setMode] = useState("light")
-  const darkTheme = createTheme({
-    palette: {
-      mode: mode,
-    },
-  })
-
+  const [isLoggedIn, setIsLoggedIn] = useState(null)
   return (
-    <ThemeProvider theme={darkTheme}>
+    <BrowserRouter>
       <Paper style={{ height: "100vh" }}>
-        <Navbar setMode={setMode} />
-        <InputFields />
-        <Details />
+        <Routes>
+          <Route
+            exact
+            path="/"
+            element={<LoginPage setIsLoggedIn={setIsLoggedIn} />}
+          />
+          <Route element={<PrivateRoute isLoggedIn={isLoggedIn} />}>
+            <Route path="/home" element={<HomePage />} />
+          </Route>
+        </Routes>
       </Paper>
-    </ThemeProvider>
+    </BrowserRouter>
   )
 }
 

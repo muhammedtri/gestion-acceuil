@@ -12,7 +12,7 @@ const Navbar = ({ setMode }) => {
     <Box>
       <AppBar position="static">
         <Toolbar style={{ display: "flex", justifyContent: "space-between" }}>
-          <Typography variant="h5">Gestion Acceuil</Typography>
+          <Typography variant="h5">Gestion Accueil</Typography>
           <Box style={{ display: "flex", alignItems: "center" }}>
             <Typography>
               {theme.palette.mode === "light" ? "Light " : "Dark "}Mode

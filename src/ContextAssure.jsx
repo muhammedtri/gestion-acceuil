@@ -27,7 +27,6 @@ export const AssureProvider = ({ children }) => {
   const [appMode, setAppMode] = useState("create")
   const [dataAssure, setDataAssure] = useState([])
   const [searchTerm, setSearchTerm] = useState("")
-
   const fetchData = async () => {
     const q = query(collection(db, "assures"), orderBy("dateSortie"))
     await onSnapshot(q, (querySnapshot) => {
@@ -49,21 +48,24 @@ export const AssureProvider = ({ children }) => {
         ass.numeroDossier.startsWith(searchTerm)
     )
   }
+  // Add Item to Firestore
   const addItem = async (item) => {
     await addDoc(collection(db, "assures"), {
       ...item,
     })
   }
 
+  // delete Item from Firestore
   const deleteItem = async (id) => {
     await deleteDoc(doc(db, "assures", id))
   }
+
+  // Update Item Firestore
   const updateItem = async (item, id) => {
     await updateDoc(doc(db, "assures", id), {
       ...item,
     })
   }
-
   const onUpdate = (ass) => {
     setAssure(ass)
   }
