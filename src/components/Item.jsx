@@ -6,6 +6,12 @@ import DeleteIcon from "@mui/icons-material/Delete"
 
 const Item = ({ assure }) => {
   const { deleteItem, setAppMode, onUpdate } = useContext(ContextAssure)
+  const handleDelete = () => {
+    const deleteConfirm = window.confirm("Veuillez confirmer la suppression ?")
+    if (deleteConfirm) {
+      deleteItem(assure.id)
+    }
+  }
   return (
     <TableRow>
       <TableCell>{assure.nom}</TableCell>
@@ -25,7 +31,7 @@ const Item = ({ assure }) => {
         >
           <BorderColorIcon />
         </IconButton>
-        <IconButton onClick={() => deleteItem(assure.id)} sx={{ color: "red" }}>
+        <IconButton onClick={handleDelete} sx={{ color: "red" }}>
           <DeleteIcon />
         </IconButton>
       </TableCell>
