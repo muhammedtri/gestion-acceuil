@@ -1,4 +1,4 @@
-import { Box, Button, TextField } from "@mui/material"
+import { Box, Button, ButtonGroup, TextField } from "@mui/material"
 import { Container } from "@mui/system"
 import React, { useContext } from "react"
 import ContextAssure from "../ContextAssure"
@@ -117,14 +117,27 @@ const InputFields = () => {
               variant="outlined"
               fullWidth
             />
-            <Button
-              variant="contained"
-              style={{ backgroundColor: "#1976d2", color: "white" }}
-              fullWidth
-              type="submit"
-            >
-              {appMode === "create" ? "Ajouter" : "Mettre à jour"}
-            </Button>
+            <ButtonGroup variant="contained">
+              <Button
+                style={{
+                  backgroundColor: "#1976d2",
+                  color: "white",
+                }}
+                fullWidth
+                type="submit"
+              >
+                {appMode === "create" ? "Ajouter" : "Mettre à jour"}
+              </Button>
+              <Button
+                fullWidth
+                onClick={() => {
+                  setAssure(initialState)
+                  setAppMode("create")
+                }}
+              >
+                EFFACER
+              </Button>
+            </ButtonGroup>
           </Box>
         </form>
       </Container>
