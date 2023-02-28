@@ -22,13 +22,14 @@ export const AssureProvider = ({ children }) => {
     dateEntree: "",
     dateSortie: "",
     retirePar: "",
+    typeDossier: "",
   }
   const [assure, setAssure] = useState(initialState)
   const [appMode, setAppMode] = useState("create")
   const [dataAssure, setDataAssure] = useState([])
   const [searchTerm, setSearchTerm] = useState("")
   const fetchData = async () => {
-    const q = query(collection(db, "assures"), orderBy("dateSortie"))
+    const q = query(collection(db, "assures"), orderBy("dateSortie", "desc"))
     await onSnapshot(q, (querySnapshot) => {
       let data = []
       querySnapshot.forEach((doc) => {

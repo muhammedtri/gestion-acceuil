@@ -1,7 +1,8 @@
-import { Box, Button, ButtonGroup, TextField } from "@mui/material"
+import { Box, Button, ButtonGroup, MenuItem, TextField } from "@mui/material"
 import { Container } from "@mui/system"
-import React, { useContext } from "react"
+import React, { useContext, useRef } from "react"
 import ContextAssure from "../ContextAssure"
+import { typeDossier } from "../Data/typeDossiers"
 
 const InputFields = () => {
   const { assure, setAssure, initialState, appMode, setAppMode, updateItem } =
@@ -13,8 +14,10 @@ const InputFields = () => {
     })
   }
   const { addItem } = useContext(ContextAssure)
+
   const handleSubmit = (e) => {
     e.preventDefault()
+    console.log(assure)
     if (appMode === "create") {
       addItem(assure)
       setAssure(initialState)
@@ -45,6 +48,9 @@ const InputFields = () => {
               onChange={handleChange}
               variant="outlined"
               fullWidth
+              InputLabelProps={{
+                shrink: true,
+              }}
             />
             <TextField
               id="outlined-basic"
@@ -54,16 +60,11 @@ const InputFields = () => {
               onChange={handleChange}
               variant="outlined"
               fullWidth
+              InputLabelProps={{
+                shrink: true,
+              }}
             />
-            <TextField
-              fullWidth
-              id="outlined-basic"
-              label="C.I.N"
-              name="cin"
-              value={assure.cin}
-              onChange={handleChange}
-              variant="outlined"
-            />
+
             <TextField
               id="outlined-basic"
               label="N° dossier"
@@ -72,7 +73,25 @@ const InputFields = () => {
               name="numeroDossier"
               onChange={handleChange}
               fullWidth
+              InputLabelProps={{
+                shrink: true,
+              }}
             />
+            <TextField
+              id="outlined-select-currency"
+              select
+              label="Type de Dossier"
+              defaultValue="ALD"
+              name="typeDossier"
+              onChange={handleChange}
+              fullWidth
+            >
+              {typeDossier.map((dossier) => (
+                <MenuItem key={dossier.value} value={dossier.value}>
+                  {dossier.label}
+                </MenuItem>
+              ))}
+            </TextField>
           </Box>
           <Box
             sx={{
@@ -116,6 +135,21 @@ const InputFields = () => {
               onChange={handleChange}
               variant="outlined"
               fullWidth
+              InputLabelProps={{
+                shrink: true,
+              }}
+            />
+            <TextField
+              fullWidth
+              id="outlined-basic"
+              label="C.I.N"
+              name="cin"
+              value={assure.cin}
+              onChange={handleChange}
+              variant="outlined"
+              InputLabelProps={{
+                shrink: true,
+              }}
             />
             <ButtonGroup variant="contained">
               <Button
