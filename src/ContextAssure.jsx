@@ -25,6 +25,7 @@ export const AssureProvider = ({ children }) => {
     typeDossier: "",
   }
   const [assure, setAssure] = useState(initialState)
+  const [typeDossier, setTypeDossier] = useState("")
   const [appMode, setAppMode] = useState("create")
   const [dataAssure, setDataAssure] = useState([])
   const [searchTerm, setSearchTerm] = useState("")
@@ -85,6 +86,8 @@ export const AssureProvider = ({ children }) => {
         setAppMode,
         onUpdate,
         updateItem,
+        typeDossier,
+        setTypeDossier,
       }}
     >
       {children}

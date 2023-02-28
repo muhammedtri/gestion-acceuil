@@ -44,12 +44,12 @@ const Details = () => {
               <TableRow>
                 <StyledTableCell>Nom Assuré</StyledTableCell>
                 <StyledTableCell align="right">Immatricule</StyledTableCell>
-                <StyledTableCell align="right">C.I.N</StyledTableCell>
                 <StyledTableCell align="right">N° Dossier</StyledTableCell>
                 <StyledTableCell align="right">Type de Dossier</StyledTableCell>
                 <StyledTableCell align="right">Date Entree</StyledTableCell>
                 <StyledTableCell align="right">Date Sortie</StyledTableCell>
                 <StyledTableCell align="right">Retiré Par</StyledTableCell>
+                <StyledTableCell align="right">C.I.N</StyledTableCell>
                 <StyledTableCell align="right">Actions</StyledTableCell>
               </TableRow>
             </TableHead>

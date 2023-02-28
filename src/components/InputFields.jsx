@@ -9,38 +9,32 @@ import {
   TextField,
 } from "@mui/material"
 import { Container } from "@mui/system"
-import React, { useContext, useRef, useState } from "react"
+import React, { useContext } from "react"
 import ContextAssure from "../ContextAssure"
 import { Dossiers } from "../Data/typeDossiers"
 
 const InputFields = () => {
   const { assure, setAssure, initialState, appMode, setAppMode, updateItem } =
     useContext(ContextAssure)
-  const [typeDossier, setTypeDossier] = useState("")
   const handleChange = (e) => {
     setAssure({
       ...assure,
       [e.target.name]: e.target.value,
-      typeDossier,
     })
   }
   const { addItem } = useContext(ContextAssure)
-  const handleSelectChange = (e) => {
-    setTypeDossier(e.target.value)
-  }
+  const handleSelectChange = (e) => {}
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log(assure)
     if (appMode === "create") {
       addItem(assure)
       setAssure(initialState)
-      setTypeDossier("")
     }
     if (appMode === "update") {
       updateItem(assure, assure.id)
       setAssure(initialState)
       setAppMode("create")
-      setTypeDossier("")
     }
   }
   return (
@@ -99,9 +93,10 @@ const InputFields = () => {
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
+                name="typeDossier"
                 label="Type de Dossier"
-                value={typeDossier}
-                onChange={handleSelectChange}
+                value={assure.typeDossier}
+                onChange={handleChange}
               >
                 {Dossiers.map((dossier) => (
                   <MenuItem key={dossier.value} value={dossier.value}>

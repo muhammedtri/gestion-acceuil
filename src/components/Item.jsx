@@ -16,12 +16,12 @@ const Item = ({ assure }) => {
     <TableRow>
       <TableCell>{assure.nom}</TableCell>
       <TableCell align="right">{assure.immatricule}</TableCell>
-      <TableCell align="right">{assure.cin}</TableCell>
       <TableCell align="right">{assure.numeroDossier}</TableCell>
       <TableCell align="right">{assure.typeDossier}</TableCell>
       <TableCell align="right">{assure.dateEntree}</TableCell>
       <TableCell align="right">{assure.dateSortie}</TableCell>
       <TableCell align="right">{assure.retirePar}</TableCell>
+      <TableCell align="right">{assure.cin}</TableCell>
       <TableCell align="right">
         <IconButton
           onClick={() => {
