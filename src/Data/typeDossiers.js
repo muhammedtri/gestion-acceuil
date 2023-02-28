@@ -1,4 +1,4 @@
-export const typeDossier = [
+export const Dossiers = [
   {
     value: "ALD",
     label: "ALD",
