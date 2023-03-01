@@ -1,5 +1,6 @@
 import {
   Container,
+  Pagination,
   Paper,
   styled,
   Table,
@@ -11,7 +12,7 @@ import {
   TextField,
 } from "@mui/material"
 import { Box } from "@mui/system"
-import React, { useContext } from "react"
+import React, { useContext, useState } from "react"
 import ContextAssure from "../ContextAssure"
 import { Item } from "../components"
 
@@ -22,6 +23,11 @@ const StyledTableCell = styled(TableCell)(() => ({
 
 const Details = () => {
   const { handleSearch, setSearchTerm } = useContext(ContextAssure)
+  const [page, setPage] = useState(1)
+  const dataItems = handleSearch()
+  const dataLength = dataItems.length
+  const pageCount = Math.round(dataLength / 5)
+  console.log(pageCount)
   return (
     <div>
       <Container>
@@ -54,12 +60,27 @@ const Details = () => {
               </TableRow>
             </TableHead>
             <TableBody>
-              {handleSearch().map((assure) => (
-                <Item key={assure.id} assure={assure} />
-              ))}
+              {handleSearch()
+                .slice((page - 1) * 5, 5 * page)
+                .map((assure) => (
+                  <Item key={assure.id} assure={assure} />
+                ))}
             </TableBody>
           </Table>
         </TableContainer>
+        <Box
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            paddingBlock: "10px",
+          }}
+        >
+          <Pagination
+            count={pageCount}
+            page={page}
+            onChange={(e, val) => setPage(val)}
+          />
+        </Box>
       </Container>
     </div>
   )
