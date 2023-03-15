@@ -27,7 +27,6 @@ const Details = () => {
   const dataItems = handleSearch()
   const dataLength = dataItems.length
   const pageCount = Math.round(dataLength / 5)
-  console.log(pageCount)
   return (
     <div>
       <Container>

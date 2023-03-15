@@ -4,12 +4,13 @@ import { Paper } from "@mui/material"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import PrivateRoute from "./components/PrivateRoute"
 import { useState } from "react"
+import Pecof from "./pages/Pecof"
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(null)
   return (
     <BrowserRouter>
-      <Paper style={{ height: "100vh" }}>
+      <Paper style={{ minheight: "100vh" }}>
         <Routes>
           <Route
             exact
@@ -18,6 +19,7 @@ function App() {
           />
           <Route element={<PrivateRoute isLoggedIn={isLoggedIn} />}>
             <Route path="/home" element={<HomePage />} />
+            <Route path="/pecof" element={<Pecof />} />
           </Route>
         </Routes>
       </Paper>

@@ -1,35 +1,42 @@
-import { useTheme } from "@emotion/react"
+import styled from "@emotion/styled"
 import { AppBar, Toolbar, Typography } from "@mui/material"
-import Brightness4Icon from "@mui/icons-material/Brightness4"
-import Brightness7Icon from "@mui/icons-material/Brightness7"
-import IconButton from "@mui/material/IconButton"
 import { Box } from "@mui/system"
 import React from "react"
+import { Link } from "react-router-dom"
+import logo from "../assets/logo.png"
 
-const Navbar = ({ setMode }) => {
-  const theme = useTheme()
+const NavLink = styled(Link)({
+  color: "white",
+  fontSize: "20px",
+  fontWeight: "bold",
+  marginInline: "10px",
+  "&:hover": {
+    color: "black",
+  },
+})
+const Navbar = () => {
   return (
     <Box>
       <AppBar position="static">
         <Toolbar style={{ display: "flex", justifyContent: "space-between" }}>
           <Typography variant="h5">Gestion Accueil</Typography>
-          <Box style={{ display: "flex", alignItems: "center" }}>
-            <Typography>
-              {theme.palette.mode === "light" ? "Light " : "Dark "}Mode
-            </Typography>
-            <IconButton
-              sx={{ ml: 1 }}
-              color="inherit"
-              onClick={() =>
-                setMode((prev) => (prev === "light" ? "dark" : "light"))
-              }
-            >
-              {theme.palette.mode === "dark" ? (
-                <Brightness7Icon />
-              ) : (
-                <Brightness4Icon />
-              )}
-            </IconButton>
+          <Box style={{ display: "flex" }}>
+            <NavLink to="/Home">
+              <Typography variant="title">Accueil</Typography>
+            </NavLink>
+            <NavLink to="/pecof">
+              <Typography variant="title">Médicament Tiers Payants</Typography>
+            </NavLink>
+            <NavLink to="/ald">
+              <Typography variant="title">ALD/ALC</Typography>
+            </NavLink>
+          </Box>
+          <Box>
+            <img
+              src={logo}
+              alt="logo"
+              style={{ width: "70px", height: "70px", borderRadius: "50%" }}
+            />
           </Box>
         </Toolbar>
       </AppBar>
