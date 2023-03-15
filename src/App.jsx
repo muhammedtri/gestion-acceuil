@@ -10,7 +10,7 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(null)
   return (
     <BrowserRouter>
-      <Paper style={{ minheight: "100vh" }}>
+      <Paper style={{ minHeight: "100vh" }}>
         <Routes>
           <Route
             exact
