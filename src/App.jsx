@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import PrivateRoute from "./components/PrivateRoute"
 import { useState } from "react"
 import Pecof from "./pages/Pecof"
+import AldAlc from "./pages/AldAlc"
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(null)
@@ -20,6 +21,7 @@ function App() {
           <Route element={<PrivateRoute isLoggedIn={isLoggedIn} />}>
             <Route path="/home" element={<HomePage />} />
             <Route path="/pecof" element={<Pecof />} />
+            <Route path="/ald" element={<AldAlc />} />
           </Route>
         </Routes>
       </Paper>
