@@ -1117,4 +1117,136 @@ export const ald = [
     pieces_fournir: "",
     periode_de_couverture: "",
   },
+  {
+    code_ald: "W037",
+    declinaisons: "Castelman Multicentrique",
+    pieces_fournir:
+      "Rapport médical détaillé précisant les éléments cliniques en faveur de la maladie + bilan biologique+  Bilan immunologique+\r\nEtude histologique+  Etude biochimique",
+    periode_de_couverture: "3 ans",
+  },
+  {
+    code_ald: "J197",
+    declinaisons: "Syndrome Myéloprolifératif",
+    pieces_fournir:
+      "Rapport médical détaillé précisant les éléments cliniques en faveur de la maladie + Hémogramme + Myélogramme+ Biopsie ostéomédullaire + Recherche de mutation JAK2 + Etude cytogénétique + Biologie\r\nmoléculaire",
+    periode_de_couverture: "3 ans",
+  },
+  {
+    code_ald: "W015",
+    declinaisons: "Trombocytémie Essentielle",
+    pieces_fournir:
+      "Rapport médical détaillé précisant les éléments cliniques en faveur de la maladie + Myélogramme  + Biopsie ostéomédullaire  + Mutation JAK2 + Biologie moléculaire + Etude\r\ncytogénétique",
+    periode_de_couverture: "3 ans",
+  },
+  {
+    code_ald: "G001",
+    declinaisons: "Retard de Croissance",
+    pieces_fournir:
+      "Rapport médical détaillé précisant les éléments cliniques en faveur de la maladie + Courbe de croissance + Age osseux + Selon l'orientation diagnostic : tests de stimulation,\r\nIRM hypophysaire, dosage de IGF1…",
+    periode_de_couverture: "3 ans",
+  },
+  {
+    code_ald: "H013",
+    declinaisons: "Déficit En OCT ''Ornithine TransCarmabylase\"",
+    pieces_fournir:
+      "Rapport médical détaillé précisant les éléments cliniques en faveur de la maladie + Bilan biologique : Amonémie  + Chromatographie des acides aminés ou acides gras  + Dosage enzymatique spécifique\r\nOCT + Etude génétique si faite",
+    periode_de_couverture: "3 ans",
+  },
+  {
+    code_ald: "M003",
+    declinaisons: "Myélite Aigue sur syndrome de Gougerot Sjorjen",
+    pieces_fournir:
+      "Rapport médical détaillé (précisant les éléments cliniques en faveur de la maladie) + (Bilan immunologique : Anti SSA, Anti SSB) non spécifiques  +  (Biopsie de la glande\r\nsalivaire) bilan histologique + IRM médullaire",
+    periode_de_couverture: "3 ans",
+  },
+  {
+    code_ald: "V003",
+    declinaisons: "Dégénérescence maculaire liée à l’âge",
+    pieces_fournir:
+      "Rapport médical détaillé (précisant le\r\nrésultat du Fond d’œil) + Compte rendu du\r\nfond d’œil + Angiographie rétinienne et/ ou tomographie en cohérence optique",
+    periode_de_couverture: "1 ans",
+  },
+  {
+    code_ald: "R006",
+    declinaisons: "Arthrite chronique juvénile",
+    pieces_fournir:
+      "Rapport médical détaillé précisant les éléments cliniques en faveur de la maladie+ Bilan inflammatoire + Bilan radiologique +\r\nBilan immunologique si fait",
+    periode_de_couverture: "3 ans",
+  },
+  {
+    code_ald: "K319",
+    declinaisons: "Hépatite  Autoimmune",
+    pieces_fournir:
+      "Rapport médical détaillé précisant les éléments cliniques en faveur de la maladie + (Bilan hépatique) Transaminases + Bilan\r\nimmunologique + Bilan histologique",
+    periode_de_couverture: "3 ans",
+  },
+  {
+    code_ald: "E114",
+    declinaisons: "Hypertension Artérielle Pulmonaire HTAP",
+    pieces_fournir:
+      "Rapport médical détaillé (précisant les éléments cliniques en faveur de la maladie) + Radiographie du thorax + ECG + Echocardiographie + Cathétérisme du coeur\r\ndroit si fait +Angioscanner thoracique si fait",
+    periode_de_couverture: "3ans",
+  },
+  {
+    code_ald: "H015",
+    declinaisons: "Sarcoïdose systémique",
+    pieces_fournir:
+      "Rapport médical détaillé (précisant les éléments cliniques en faveur de la maladie)+ bilan biologique + Bilan radiologique + Bilan histologique si fait + (Bilan immunologique) +\r\n(Endoscopie trache-obronchique)",
+    periode_de_couverture: "6 mois",
+  },
+  {
+    code_ald: "H012",
+    declinaisons: "Insuffisance hypophysaire",
+    pieces_fournir:
+      "Rapport médical détaillé  + Bilan hormonal + Tests dynamiques",
+    periode_de_couverture: "5 ans",
+  },
+  {
+    code_ald: "K330",
+    declinaisons: "Maladie de Vogt koyanagi Harada",
+    pieces_fournir:
+      "Rapport médical détaillé +Angiographie + compte rendu de l’OCT + Cytologie du LCR si faite",
+    periode_de_couverture: "2 ans",
+  },
+  {
+    code_ald: "H014",
+    declinaisons: "Mucopolysaccharidose de type I",
+    pieces_fournir:
+      "Rapport médical détaillé + Dosage de l’alpha- L-iduronidas + Dosage des excrétions urinaires de SD (dermatane-sulfate) ou de SH (héparane-sulfate) + autres bilans réalisés\r\n(biologiques, radiologiques..)",
+    periode_de_couverture: "3 ans",
+  },
+  {
+    code_ald: "C002",
+    declinaisons: "Fibrose pulmonaire idiopathique",
+    pieces_fournir:
+      "Rapport médical détaillé +EFR + TDM thoracique + Biopsie pulmonaire et/ou lavage broncho alvéolaire si faits",
+    periode_de_couverture: "5 ans",
+  },
+  {
+    code_ald: "M042",
+    declinaisons: "Spina bifida",
+    pieces_fournir: "Rapport médical détaillé + Bilan radiologique",
+    periode_de_couverture: "5 ans",
+  },
+  {
+    code_ald: "H017",
+    declinaisons: "MUCOVISCIDOSE",
+    pieces_fournir:
+      "Rapport médical détaillé précisant le tableau clinique que présente le patient+ Recherche du gène CFTR+Test à la sueur",
+    periode_de_couverture: "3 ans",
+  },
+  {
+    code_ald: "R012",
+    declinaisons: "POEMS Sydrome",
+    pieces_fournir:
+      "Rapport médical détaillé précisant le tableau clinique que présente le patient +Bilan biologique et radiologique+EMG/ENMG\r\n+Electrophorèse des protéines",
+    periode_de_couverture: "5 ans",
+  },
+  {
+    code_ald: "C450",
+    declinaisons: "Broncho-Pneumophatie Chronique Obstructive",
+    pieces_fournir:
+      "Rapport médical détaillé + compte rendu de l'EFR+ ordonnance",
+    periode_de_couverture: "5 ans",
+  },
 ]
