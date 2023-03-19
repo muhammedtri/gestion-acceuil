@@ -37,6 +37,7 @@ export const AssureProvider = ({ children }) => {
         data.push({ ...doc.data(), id: doc.id })
       })
       setDataAssure(data)
+      console.log(data)
     })
   }
 
