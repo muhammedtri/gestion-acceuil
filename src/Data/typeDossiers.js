@@ -4,8 +4,8 @@ export const Dossiers = [
     label: "ALD",
   },
   {
-    value: "Entente Préalable",
-    label: "Entente Préalable",
+    value: "EPDNM",
+    label: "EPDNM",
   },
   {
     value: "MDRT",

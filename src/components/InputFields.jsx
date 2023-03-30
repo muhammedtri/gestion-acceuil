@@ -23,7 +23,6 @@ const InputFields = () => {
     })
   }
   const { addItem } = useContext(ContextAssure)
-  const handleSelectChange = (e) => {}
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log(assure)
